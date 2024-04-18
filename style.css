@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&family=Press+Start+2P&family=VT323&display=swap");
+
+/* Style Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: #161513;
+  color: #eaeaea;
+  font-family: "VT323", monospace;
+  letter-spacing: 3px;
+}
+
+/* Element Styles */
+#wrapper h1 {
+  padding: 10px 0;
+  font-size: 42px;
+}
+
+.cell {
+  width: 75px;
+  height: 75px;
+  margin: 5px;
+  border: 1px solid rgba(107, 243, 94, 0.055);
+  background: rgba(227, 250, 225, 0.048);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+  font-size: 60px;
+  cursor: pointer;
+}
+
+#cellContainer {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: auto;
+}
+
+.resetButton {
+  font-size: 20px;
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: #db221f;
+  outline: none;
+  border: none;
+  color: #eaeaea;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.resetButton:active {
+  animation: press 0.2s 1 linear;
+}
+
+@keyframes press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
